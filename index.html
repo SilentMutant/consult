@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Consultancy Firm </title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="css/styles.css">
+	<title> Consultancy Firm </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header>
@@ -12,41 +12,52 @@
 	</div>
 	<nav>
 		<ul>
-			<li><a href="index.html"> HOME </a></li>
+			<li><a href="index.html" class="selected"> HOME </a></li>
 			<li><a href="about.html"> ABOUT </a></li>
 			<li><a href="services.html"> SERVICES </a></li>
 			<!-- Add 2 more !-->
 			<li><a href="contact.html"> CONTACT </a></li>
 		</ul>
 	</nav>
+	<script>
+	    var mainImg = ["images/main-1.jpg", "images/main-2.jpg"];
+	    var currImg = 1;
+	    window.setInterval(function()
+	    {
+	        document.getElementById("main-img").src=mainImg[currImg];
+	        if(currImg == 0) currImg++;
+	        else currImg--;
+	    }, 3000);
+	</script>
 </header>
 <main>
-<div id="top">
-</div>
-<div id="bot">
-	<div id="botLeft"><p>
-		<h2> Title </h2>
-		This is a place holder. 
-		This is a place holder. 
-		This is a place holder. 
-		This is a place holder. 
-		This is a place holder. 
-		This is a place holder. 
-	</p></div>
-	<div id="botRight"><p>
-		<h2> Title </h2>
-		This is a place holder. 
-		This is a place holder. 
-		This is a place holder. 
-		This is a place holder. 
-		This is a place holder. 
-		This is a place holder. 
-	</p></div>
-</div>
+	<div id="top">
+		<img src="images/main-1.jpg" alt="Consultancy Firm" id="main-img">
+	</div>
+	<div id="bot">
+		<div id="botLeft"><p>
+			<h2> Make Tech Work For You</h2>
+			This is a place holder. 
+			This is a place holder. 
+			This is a place holder. 
+			This is a place holder. 
+			This is a place holder. 
+			This is a place holder. 
+		</p></div>
+		<div id="botRight"><p>
+			<h2> Standardize Your Brand Image </h2>
+			This is a place holder. 
+			This is a place holder. 
+			This is a place holder. 
+			This is a place holder. 
+			This is a place holder. 
+			This is a place holder. 
+		</p></div>
+	</div>
 </main>
 <footer>
 	<div id="copyright">
-	<p> &copy; 2015 by Lukas Hernandez </p>
+	<p> &copy; 2015 Consultancy Firm</p>
 	</div>
 	<div id="social-networks">
 	<p>

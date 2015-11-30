@@ -34,12 +34,35 @@ li a{
 }
 a:link{
 	color: white;
+	transition: 0.25s linear;
 }
 a:visited{
-	color: red;
+	color: darkred;
+	transition: 0.25s linear;
+	/*Having a visited style almost seems super cheap - is it a requirement?
+	   If not, we can just change it to the link colour and not deal with it! */
 }
 a:hover{
-	color: gray;
+	color: red;
+	transition: 0.25s linear;
+}
+a.selected
+{
+	color:red;
+	font-weight: bold;
+}
+#top
+{
+	margin-bottom: 1em;
+	text-align: center;
+}
+#top img
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:80%;
+	height:80%;
 }
 #bot{
 	display: flex;
