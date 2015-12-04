@@ -1,52 +1,57 @@
 /* Index Styles */
-body{
+body
+{
 	margin-left: 10%;
 	margin-right: 10%;
 	font-family: sans-serif;
 }
-header{
+header
+{
 	display: flex;
 	background-color: black;
 	color: white;
 	margin-bottom: 3%;
 }
-header li{
+header li
+{
 	display: inline;
 }
-header div{
-	margin-left: 3%;
+header div
+{
+	margin-left: 5%;
 	padding-left: 2%;
+	width:10%;
 }
-header nav{
+header nav
+{
 	margin-left:4%;
 }
-header li{
+header li
+{
 	margin-left: 4%;
 }
-nav{
-	margin-left: 10%;
-	margin-top: 3%;
-	width: 60%;
+nav
+{
+	margin-top: 4em;
+	width: 100ex;
 	text-align: center;
 }
-li a{
+nav li a{
 	text-decoration: none;
 }
-a:link{
+nav a:link{
 	color: white;
 	transition: 0.25s linear;
 }
-a:visited{
-	color: darkred;
+nav a:visited{
+	color: white;
 	transition: 0.25s linear;
-	/*Having a visited style almost seems super cheap - is it a requirement?
-	   If not, we can just change it to the link colour and not deal with it! */
 }
-a:hover{
+nav a:hover{
 	color: red;
 	transition: 0.25s linear;
 }
-a.selected
+nav a.selected
 {
 	color:red;
 	font-weight: bold;
@@ -78,6 +83,14 @@ a.selected
 #botRight{
 	margin-left: 2%;
 }
+
+#topLeft{
+	margin-right: 2%;
+}
+#topRight{
+	margin-left: 2%;
+}
+
 footer{
 	display: flex;
 	background-color: black;
@@ -88,4 +101,12 @@ footer{
 }
 #social-networks{
 	margin-left: 50%;
+}
+
+
+#main-img
+{
+	max-width:100%;
+	height:auto;
+	margin-bottom: 2em;
 }

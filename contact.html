@@ -4,6 +4,28 @@
 	<title> Consultancy Firm </title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script>
+		var myCentre = new google.maps.LatLng(44.4758825, -73.212072);
+		var zoomLevel = 7;
+		var mapID = google.maps.MapTypeId.ROADMAP
+		function initialize()
+		{
+			var mapObject = 
+			{
+				center: myCentre,
+				zoom: zoomLevel,
+				mapTypeId: mapID
+			};
+			var map= new google.maps.Map(document.getElementById("googleMap"), mapObject);
+			var marker = new google.maps.Marker({
+				position:myCentre,
+				animation:google.maps.Animation.BOUNCE
+			});
+			marker.setMap(map);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize)
+	</script>
 </head>
 <body>
 <header>
@@ -15,13 +37,32 @@
 			<li><a href="index.html"> HOME </a></li>
 			<li><a href="about.html"> ABOUT </a></li>
 			<li><a href="services.html"> SERVICES </a></li>
-			<!-- Add 2 more !-->
+			<li><a href="#">UNTITLED</a></li>
+			<li><a href="#">UNTITLED</a></li>
 			<li><a href="contact.html" class="selected"> CONTACT </a></li>
 		</ul>
 	</nav>
 </header>
 <main>
-	<h1 style="text-align:center;text-shadow:#111 0px 0px 2px;"> This page intentionally left blank! </h1>
+	<div id="top">
+		<h1> Contact Us! </h1>
+	</div>
+	<div id="bot">
+		<div id="botLeft" style="width:40%">
+			<h2> Contact Information</h2>
+			<p>
+				Telephone (Local): 1-802-555-5555<br>
+				Telephone (Toll-Free): 1-800-CON-SULT<br>
+				Address: 285 South Willard St.<br>
+				Email: fakeafemail@consultfirm.com<br>
+				Follow us on <a href="http://facebook.com">Facebook</a> and <a href="http://twitter.com">Twitter</a><br>
+			</p>
+		</div>
+		<div id="botRight" style="width:60%">
+			<h2> Google Maps</h2>
+			<div id="googleMap" style="width:100%;height:380px;margin-bottom:2em;"></div>
+		</div>
+	</div>
 </main>
 <footer>
 	<div id="copyright">
@@ -30,8 +71,8 @@
 	<div id="social-networks">
 	<p>
 	FOLLOW US:
-	<img src="images/facebook.jpg" alt="Facebook Icon">
-	<img src="images/twitter.jpg" alt="Twitter Icon">
+	<a href="http://facebook.com"><img src="images/facebook.jpg" alt="Facebook Icon"></a>
+	<a href="http://twitter.com"><img src="images/twitter.jpg" alt="Twitter Icon"></a>
 	<p>
 	</div>
 </footer>
